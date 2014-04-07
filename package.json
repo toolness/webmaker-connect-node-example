@@ -1,0 +1,18 @@
+{
+  "name": "webmaker-connect-node-example",
+  "version": "0.0.1",
+  "description": "Example third-party app that authenticates via Webmaker Connect",
+  "main": "app.js",
+  "dependencies": {
+    "client-sessions": "~0.6.0",
+    "express": "~3.5.1",
+    "mustache": "~0.8.1",
+    "oauth": "~0.9.11"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "BSD-2-Clause"
+}

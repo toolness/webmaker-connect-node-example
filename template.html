@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<link rel="stylesheet" href="bootstrap.css">
+<title>Webmaker Connect Example App</title>
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">Webmaker Connect Example App</a>
+    </div>
+
+    {{^username}}
+    <form class="navbar-form navbar-right" method="POST" action="/login">
+      <input type="hidden" name="_csrf" value="{{ csrfToken }}">
+      <button type="submit" class="btn btn-default">Login</button>
+    </form>
+    {{/username}}
+
+    {{#username}}
+    <ul class="nav navbar-nav navbar-right">
+      <li><span class="navbar-text">
+        <img src="//www.gravatar.com/avatar/{{emailHash}}" style="width: 1.6em; height: 1.6em">
+        Logged in as <a href="https://webmaker.org/u/{{username}}">{{username}}</a>
+      </span></li>
+      <li>
+        <form class="navbar-form" method="POST" action="/logout">
+          <input type="hidden" name="_csrf" value="{{ csrfToken }}">
+          <button type="submit" class="btn btn-default">Logout</button>
+        </form>
+      </li>
+    </ul>
+    {{/username}}
+  </div>
+</nav>
+<div class="container">
+  <p>This is an example third-party app that uses the
+    <a href="{{WMCONNECT_ORIGIN}}">Webmaker Connect</a> service to securely
+    connect to your Mozilla Webmaker account.</p>
+</div>
