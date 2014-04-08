@@ -31,7 +31,9 @@ Then visit http://127.0.0.1:8000 and try logging in.
   to prevent tampering. By default, it will be set to a random value;
   the downside of this default is that every time you restart the server,
   any existing cookies will be invalid, since `COOKIE_SECRET` will have
-  changed.
+  changed. And if you actually want to deploy this app and have it scale
+  across multiple processes, you'll definitely want to define this,
+  so that every process uses the same key.
 
 * `ORIGIN` is the origin of the server, as it appears
   to users. It defaults to `http://127.0.0.1:PORT`.
