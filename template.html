@@ -11,7 +11,9 @@
     {{^username}}
     <form class="navbar-form navbar-right" method="POST" action="/login">
       <input type="hidden" name="_csrf" value="{{ csrfToken }}">
-      <button type="submit" class="btn btn-default">Login</button>
+      <button type="submit" class="btn btn-default" style="background-image: url(/webmaker-logo.png); background-size: 30px; background-position: 2px 2px; background-repeat: no-repeat; padding-left: 34px">
+        Login with Webmaker
+      </button>
     </form>
     {{/username}}
 
