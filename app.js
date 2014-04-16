@@ -10,7 +10,7 @@ var COOKIE_SECRET = process.env.COOKIE_SECRET ||
                     crypto.randomBytes(128).toString('hex');
 var ORIGIN = process.env.ORIGIN || 'http://127.0.0.1:' + PORT;
 var WMCONNECT_ORIGIN = process.env.WMCONNECT_ORIGIN ||
-                       'https://webmaker-connect.herokuapp.com';
+                       'https://webmakerconnect.org';
 var MISSING_ENV_VARS = ['API_KEY', 'API_SECRET'].filter(function(name) {
   return !process.env[name];
 });
