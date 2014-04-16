@@ -56,4 +56,4 @@ this server uses `127.0.0.1` in its default origin, while the Webmaker
 Connect development server uses `localhost`.
 
   [OAuth]: http://oauth.net/
-  [Webmaker Connect]: https://webmaker-connect.herokuapp.com
+  [Webmaker Connect]: https://webmakerconnect.org
